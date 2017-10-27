@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en"> 
+  <stl:include file="/include/head.html"></stl:include>
+  <body>
+    <div id="boxedWrapper">
+      <stl:include file="/include/header.html"></stl:include>
+      <stl:include file="/include/location.html"></stl:include>
+      <section class="content-area bg1">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <img src="{Content.ImageUrl}" />
+            </div>
+            <div class="col-md-4">
+              <h1 class="widget-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">联系我们</font></font></h1>
+              <dl>
+                <dt>电子邮件</dt>
+                <dd>admin@siteserver.cn</dd>
+                
+                <dt>地址</dt>
+                <dd>北京市海淀区中关村大街</dd>
+                
+                <dt>电话</dt>
+                <dd>010-2345678</dd>
+              </dl>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+      <section class="content-area bg2">
+        <div class="container">
+          
+          <header class="page-header text-center">
+            <h1 class="page-title">相关项目</h1>
+          </header>
+          
+          <div id="galleryContainer" class="clearfix withSpaces col-4">
+            <stl:contents channelIndex="综合新闻" scope="SelfAndChildren" totalNum="4" order="AddDate">
+              <div class="galleryItem identity">
+                <article class="portfolio-item">
+                  <div class="portfolio-thumbnail">
+                    <stl:a href="04-pluto-portfolio-single.html"><img src="{Content.ImageUrl}" alt="{Content.Title}"></stl:a>
+                    <stl:a href="04-pluto-portfolio-single.html" class="overlay-img"><span class="overlay-ico"><i class="fa fa-plus"></i></span></stl:a>
+                  </div>
+                  <div class="entry-meta">
+                    <span class="cat-links">
+                      <stl:tags totalNum="4">
+                        <a href="{Stl.SiteUrl}/utils/tags.html?tagName={Tag.Name}">{Tag.Name}</a>
+                      </stl:tags>
+                    </span>
+                  </div>
+                  <h4 class="entry-title"><stl:a><stl:content type="Title" wordNum="14" ellipsis="..."></stl:content></stl:a></h4>
+                </article>
+              </div>
+            </stl:contents>
+          </div>
+        </div>
+      </section>
+      <stl:include file="/include/footer.html"></stl:include>
+    </div>
+    <stl:include file="/include/js.html"></stl:include>
+    <stl:include file="/include/stylechooser.html"></stl:include>
+  </body>
+</html>
+
+

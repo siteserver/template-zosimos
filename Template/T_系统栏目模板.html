@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <stl:include file="/include/head.html"></stl:include>
+  <body>
+    <div id="boxedWrapper">
+      <stl:include file="/include/header.html"></stl:include>
+      <stl:include file="/include/location.html"></stl:include>
+      <section class="content-area bg2">
+        <div class="container">
+          <div id="blog-list" class="clearfix withMasonry">
+            <stl:pageContents pageNum="9" order="AddDate">
+              <article class="blog-item item-bigger">
+                <div class="blog-thumbnail">
+                  <stl:a><img src="{Content.ImageUrl}" alt="{Content.Title}"></stl:a>
+                </div>
+                <div class="innerMargin">
+                  <div class="entry-meta">
+                    <span class="entry-date"><stl:content type="AddDate" formatString="yyyy年MM月dd日"></stl:content></span>
+                  </div>
+                  <h4 class="entry-title"><stl:a><stl:content type="15" ellipsis="..."></stl:content></stl:a></h4>
+                  <p>
+                    <stl:content type="Summary" wordNum="60" ellipsis="..."></stl:content>
+                  </p>
+                  <stl:a class="readMore">查看更多 →</stl:a>
+                </div>
+              </article>
+            </stl:pageContents>
+          </div>
+          <div class="lineSeparatorMasonry clearfix"></div>
+          <div class="row navigation-blog-outer">
+            <stl:pageItems autoHide="true">
+              <div class="col-md-3 col-xs-6 text-left">
+                <stl:pageItem type="PreviousPage">
+                  <stl:yes>
+                    <a href="{Current.Url}" class="navigation-blog">← 上一页</a>
+                  </stl:yes>
+                  <stl:no>
+                    <a href="javascript:;" class="navigation-blog">← 上一页</a>
+                  </stl:no>
+                </stl:pageItem>
+              </div>
+              <div class="col-md-3 col-xs-6 col-md-push-6 text-right">
+                <stl:pageItem type="NextPage">
+                  <stl:yes>
+                    <a href="{Current.Url}" class="navigation-blog">下一页 →</a>
+                  </stl:yes>
+                  <stl:no>
+                    <a href="javascript:;" class="navigation-blog">下一页 →</a>
+                  </stl:no>
+                </stl:pageItem>
+              </div>
+              <div class="clearfix visible-sm visible-xs"></div>
+              <div class="col-md-6 col-md-pull-3">
+                <ul class="pagination text-center">
+                  <stl:pageItem type="PageNavigation" listNum="4">
+                    <stl:yes>
+                        <li><a href="{Current.Url}">{Current.Num}</a></li>
+                    </stl:yes>
+                    <stl:no>
+                      <li class="active"><a href="javascript:;">{Current.Num}</a></li>
+                    </stl:no>
+                  </stl:pageItem>
+                </ul>
+              </div>
+            </stl:pageItems>
+          </div>
+        </div>
+      </section>
+      <stl:include file="/include/footer.html"></stl:include>
+    </div>
+    <stl:include file="/include/js.html"></stl:include>
+    <stl:include file="/include/stylechooser.html"></stl:include>
+  </body>
+</html>

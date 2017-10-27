@@ -1,0 +1,22 @@
+<div class="col-md-3">
+        <div id="blog-sidebar">
+          <aside class="widget">
+            <h1 class="widget-title">新闻推荐</h1>
+		<stl:contents channelIndex="综合新闻" scope="SelfAndChildren" totalNum="6" order="Hits">
+                <article class="blog-item">
+                  <div class="entry-meta">
+                    <span class="entry-date"><stl:content type="AddDate" formatString="yyyy年MM月dd日"></stl:content></span>
+                  </div>
+                  <h4 class="entry-title"><stl:a><stl:content type="Title" wordNum="30" ellipsis="..."></stl:content></stl:a></h4>
+                </article>
+            </stl:contents>
+          </aside>
+
+          <aside class="widget wp_widget_tag_cloud">
+            <h1 class="widget-title">内容标签</h1>
+			<stl:tags context="Channel" totalNum="15">
+            <a href="{Stl.SiteUrl}/utils/tags.html?tagName={Tag.Name}" class="btn btn-default btn-sm">{Tag.Name}</a>
+            </stl:tags>
+          </aside>
+        </div>
+      </div>

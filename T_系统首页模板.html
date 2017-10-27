@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en"> 
+  <stl:include file="/include/head.html"></stl:include>
+  <body class="withAnimation">
+    <div id="boxedWrapper">
+      <stl:include file="/include/header.html"></stl:include>
+      <section class="flexslider std-slider" data-height="560" data-loop="true" data-smooth="false" data-slideshow="true" data-speed="15000" data-animspeed="550" data-controls="true" data-dircontrols="true">
+        <ul class="slides">
+          <stl:contents channelIndex="Banner" totalNum="2">
+            <li style="background-image: url({Content.ImageUrl});">
+              <div class="container">
+                <div class="inner">
+                  <div class="row">
+                    <div class="col-md-6 animated" data-fx="fadeIn">
+                      <h2><stl:content type="Title" wordNum="17"></stl:content></h2>
+                      <p><stl:content type="Summary" wordNum="100" ellipsis="..."></stl:content></p>
+                      <stl:a class="btn btn-default btn-lg">查看更多</stl:a>
+                    </div>
+                    <div class="col-md-6"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </stl:contents>
+        </ul>
+      </section>
+      <section class="content-area bg1">
+        <div class="container">
+          <div class="row">
+          <stl:channels channelIndex="我们的服务">
+            <div class="col-md-4">
+              <div class="iconBox">
+                <div class="media">
+                  <a class="pull-left" href="javascript:;">
+                    <span class="octagon">
+                      <span class="svg-load"></span>
+                      <i class="fa {stl:channel type=icon}"></i>
+                    </span>
+                  </a>
+                  <div class="media-body">
+                    <h4 class="media-heading"><a href="javascript:;">{Channel.Title}</a></h4>
+                    <stl:channel type="Content"></stl:channel>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </stl:channels>
+          </div>
+        </div>
+      </section>      
+      <section class="content-area bg2">
+        <div class="container">    
+          <header class="page-header text-center">
+            <h2>最新的产品展示</h2>
+          </header>
+          <div class="flexslider carousel-slider" data-slideshow="false" data-speed="7000" data-animspeed="600" data-loop="true" data-min="1" data-max="3" data-move="1" data-controls="true" data-dircontrols="true">
+            <ul class="slides">
+              <stl:contents channelIndex="产品展示" scope="SelfAndChildren" totalNum="9" order="AddDate">
+                <li>
+                  <article class="portfolio-item animated" data-fx="fadeInUp">
+                    <div class="portfolio-thumbnail">
+                      <stl:a><img src="{Content.ImageUrl}" alt="{Content.Title}"></stl:a>
+                      <stl:a class="overlay-img"><span class="overlay-ico"><i class="fa fa-plus"></i></span></stl:a>
+                    </div>
+                    <div class="entry-meta">
+                      <span class="cat-links"><stl:a><stl:content type="Author"></stl:content></stl:a>, <stl:a><stl:content type="Source"></stl:content></stl:a></span>
+                    </div>
+                    <h4 class="entry-title"><stl:a><stl:content type="Title" wordNum="20" ellipsis="..."></stl:content></stl:a></h4>
+                  </article>
+                </li>
+              </stl:contents>
+            </ul>
+          </div>
+          <div class="text-center">
+            <a href="{Channel.NavigationUrl_产品展示}" class="btn btn-default animated" data-fx="fadeInUp">查看更多</a>
+          </div>
+        </div>
+      </section>
+      <section class="content-area bg1" data-btmspace="0">
+        <div class="container">
+          <div class="promoBox">
+            <div class="row">
+              <div class="col-md-6 col-md-push-6">
+                <div class="inner animated" data-fx="fadeInLeft">
+                  <h2>公司简介</h2>
+                  <p class="larger">
+                    <stl:channel channelName="公司介绍" type="Content" isClearTags="true"></stl:channel>
+                  </p>
+                  <a href="{Channel.NavigationUrl_公司介绍}" class="btn btn-default">查看更多</a>
+                </div>
+              </div>
+              <div class="col-md-6 col-md-pull-6">
+              <stl:channel channelName="公司介绍" type="ImageUrl" alt="{Channel.Title}" class="animated" data-fx="fadeInLeft"></stl:channel>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="content-area brightText" data-bg="{stl.siteurl}/images/home-v1-clients-bg.jpg">
+        <div class="container">
+          <header class="page-header text-center">
+            <h2>和听你意见的老板一起创业，和聪明互助的同事一起造梦。</h2>
+          </header>
+          <div class="row">
+            <div class="col-md-12">
+              <blockquote class="clearfix animated" data-fx="fadeInLeft">
+                <div class="inner">
+                  <p class="larger">
+                    <stl:channel channelIndex="关于我们" type="Content" isClearTags="true"></stl:channel>
+                  </p>
+                </div>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="content-area bg1">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-6">
+              <header class="page-header text-left animated" data-fx="flipInY">
+                <h1 class="page-title">NEWS INFORMATION</h1>
+                <h2>新闻资讯</h2>
+                <a href="{Channel.NavigationUrl_新闻资讯}" class="btn btn-default">查看更多</a>
+              </header>
+            </div>
+            <stl:contents channelIndex="综合新闻" scope="SelfAndChildren" totalNum="3" order="AddDate">
+                <div class="col-md-3 col-sm-6">
+                  <article class="blog-item animated" data-fx="fadeInDown">
+                    <div class="blog-thumbnail">
+                      <stl:a><img src="{Content.ImageUrl}" alt="{Content.Title}"></stl:a>
+                    </div>
+                    <div class="entry-meta">
+                      <span class="entry-date"><stl:content type="AddDate" formatString="yyyy年MM月dd日"></stl:content></span>
+                    </div>
+                    <h4 class="entry-title"><stl:a><stl:content type="Title" wordNum="14" ellipsis="..."></stl:content></stl:a></h4>         
+                    <p>
+                      <stl:content type="Summary" wordNum="55" ellipsis="..."></stl:content>
+                    </p>
+                  </article>
+                </div>
+            </stl:contents>
+          </div>
+        </div>
+      </section>
+      <stl:include file="/include/footer.html"></stl:include>
+    </div>
+    <stl:include file="/include/js.html"></stl:include>
+    <stl:include file="/include/stylechooser.html"></stl:include>
+  </body>
+</html>
